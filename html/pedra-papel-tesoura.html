@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/pedra-papel-tesoura.css">
+    <title>Pedra Papel Tesoura</title>
+</head>
+<body>
+    <h1>Pedra Papel Tesoura</h1>
+    <div id="gameContainer">
+        <button id="pedra" onclick="gameRound('Pedra')">Pedra</button>
+        <button id="papel" onclick="gameRound('Papel')">Papel</button>
+        <button id="tesoura" onclick="gameRound('Tesoura')">Tesoura</button>
+    </div>
+    <div id="placar">
+        <div class="flex-child" id="box-pontos-jogador">
+            <div class="emoji-container">
+                <p>&#x1F998</p>
+            </div>
+            <div id="player-score" class="score">
+                <span id="playerScoreCount">0</span>
+                <br><span id="playerMove" class="move"></span>
+            </div>
+        </div>
+        <div class="flex-child" id="box-pontos-computador">
+            <div class="emoji-container">
+                <p>&#x1F916</p>
+            </div>
+            <div id ="bot-score" class="score">
+                <span id="botScoreCount">0</span>
+                <br><span id="botMove" class="move"></span>
+            </div>
+        </div>
+    </div>
+     <div id="reset-button">
+            <button onclick="clearScore()">Restaurar Placar</button>
+    </div>
+    <script src="../JS/pedra-papel-tesoura.js"></script>
+</body>
+</html>
